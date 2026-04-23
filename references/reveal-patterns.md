@@ -46,7 +46,7 @@ export function Scene({ children }: { children: React.ReactNode }) {
 
 **Use when:** a single element (title, hero visual, headline metric) is the undisputed focal moment and everything else is supporting.
 
-**Behavior:** focal element lands via `fadeUp` at t=0. Supporting content enters as a staggered block starting 200ms later.
+**Behavior:** focal element lands via `fadeUp` at t=0. Supporting content enters as a staggered block starting 200ms later, using the `staggerContainer` timing (80ms).
 
 ```tsx
 import { motion } from "framer-motion";
@@ -66,8 +66,7 @@ export function FocalScene() {
 
       <motion.div
         variants={{
-          initial: {},
-          animate: { transition: { delayChildren: 0.2, staggerChildren: 0.1 } },
+          animate: { transition: { delayChildren: 0.2, staggerChildren: 0.08 } },
         }}
         initial="initial"
         animate="animate"
