@@ -61,7 +61,7 @@ export function Hero() {
           variants={fadeUp}
           initial="initial"
           animate="animate"
-          className="text-sc-caption text-sc-text/60 mb-sc-4 tracking-wide"
+          className="text-sc-caption text-sc-text-secondary mb-sc-4 tracking-wide"
         >
           Introducing
         </motion.p>
@@ -84,13 +84,13 @@ export function Hero() {
         >
           <motion.p
             variants={fadeUp}
-            className="text-sc-body text-sc-text/60 mb-sc-8 max-w-xl mx-auto"
+            className="text-sc-body text-sc-text-secondary mb-sc-8 max-w-xl mx-auto"
           >
             Build, deploy, and scale with confidence.
           </motion.p>
 
           <motion.div variants={fadeUp} className="flex gap-sc-4 justify-center">
-            <button className="bg-sc-accent-neutral text-sc-bg px-sc-6 py-sc-3 rounded-sc-md text-sc-body font-medium transition-colors hover:bg-white">
+            <button className="bg-sc-accent-neutral text-sc-bg px-sc-6 py-sc-3 rounded-sc-md text-sc-body font-medium transition-colors hover:bg-sc-text">
               Start free trial
             </button>
             <button className="border border-sc-border text-sc-text px-sc-6 py-sc-3 rounded-sc-md text-sc-body font-medium transition-colors hover:bg-sc-surface-1">

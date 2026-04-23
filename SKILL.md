@@ -23,7 +23,7 @@ Skip Stagecraft when the requested interface should feel playful, cute, gamified
 
 1. **Identify UI intent.** Name what the screen is for, what must remain visible and usable, and what the primary focal region should be. Write this down in one or two sentences before touching styling.
 2. **Apply the visual system.** Load `references/visual-system.md` and use its palette, type scale, spacing grid, radius, and shadow tokens. Do not invent values.
-3. **Apply motion tokens.** Load `references/motion-tokens.md` and use the named variants (`sceneEnter`, `fadeUp`, `fadeIn`, `modalIn`, `scaleSettle`, `sceneExit`, `stagger`). Do not invent durations or easing curves.
+3. **Apply motion tokens.** Load `references/motion-tokens.md` and use the named variants (`sceneEnter`, `fadeUp`, `fadeIn`, `modalIn`, `scaleSettle`, `sceneExit`, `staggerContainer`, `staggerBlock`). Do not invent durations or easing curves.
 4. **Apply reveal sequencing.** Load `references/reveal-patterns.md` and pick one of the five patterns (scene-entry, focal-first, line-by-line, block-by-block, progressive-disclosure). Do not combine more than one primary pattern within a single element tree.
 5. **Run the audit.** Load `references/audit-checklist.md` and score the output against eight dimensions before declaring done. Fix any dimension that is not at target.
 
