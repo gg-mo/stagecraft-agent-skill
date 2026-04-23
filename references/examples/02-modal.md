@@ -93,7 +93,7 @@ export function DeleteModal({ open, onClose, onConfirm }: {
             <h2 id="delete-title" className="text-sc-heading font-medium mb-sc-3">
               Delete account
             </h2>
-            <p className="text-sc-body text-sc-text/60 mb-sc-6">
+            <p className="text-sc-body text-sc-text-secondary mb-sc-6">
               This action cannot be undone. All your data will be permanently erased.
             </p>
             <div className="flex gap-sc-3 justify-end">
