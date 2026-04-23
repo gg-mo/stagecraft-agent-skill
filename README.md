@@ -21,20 +21,22 @@ Skip it for: playful, gamified, maximalist, dense data tables, enterprise-densit
 
 ### Install — Claude Code
 
-Clone this repo into `~/.claude/skills/`:
+Stagecraft ships as a Claude Code plugin with an in-repo marketplace. Add the marketplace, then install the plugin:
 
 ```
-git clone https://github.com/YOUR-ORG/stagecraft-agent-skill ~/.claude/skills/stagecraft
+/plugin marketplace add gg-mo/stagecraft-agent-skill
+/plugin install stagecraft@stagecraft-agent-skill
 ```
 
-Claude Code loads `SKILL.md` automatically and pulls references on demand.
+Claude Code loads the plugin's `SKILL.md` automatically and pulls references on demand.
 
 ### Install — Copilot CLI
 
-Copilot CLI reads the same skill format. Clone into its skills directory:
+Copilot CLI reads the same skill format. Clone the repo and point it at the skill directory:
 
 ```
-git clone https://github.com/YOUR-ORG/stagecraft-agent-skill ~/.copilot/skills/stagecraft
+git clone https://github.com/gg-mo/stagecraft-agent-skill ~/.copilot/skills/stagecraft-src
+ln -s ~/.copilot/skills/stagecraft-src/skills/stagecraft ~/.copilot/skills/stagecraft
 ```
 
 ### Install — Cursor
@@ -79,13 +81,17 @@ The agent will consult `SKILL.md`, follow the 5-step workflow, and apply tokens 
 ## Repo layout
 
 ```
-SKILL.md                     # entry point (Claude Code / Copilot CLI read this)
-references/
-  motion-tokens.md           # durations, easings, variants
-  visual-system.md           # palette, type, spacing
-  reveal-patterns.md         # five sequencing patterns
-  audit-checklist.md         # Mode C critique flow
-  examples/                  # before/after transformations
+.claude-plugin/
+  plugin.json                # Claude Code plugin manifest
+  marketplace.json           # in-repo marketplace manifest
+skills/stagecraft/
+  SKILL.md                   # entry point (Claude Code / Copilot CLI read this)
+  references/
+    motion-tokens.md         # durations, easings, variants
+    visual-system.md         # palette, type, spacing
+    reveal-patterns.md       # five sequencing patterns
+    audit-checklist.md       # Mode C critique flow
+    examples/                # before/after transformations
 integrations/                # generated wrappers (do not hand-edit)
   cursor/stagecraft.mdc
   codex/AGENTS.md
@@ -93,7 +99,7 @@ integrations/                # generated wrappers (do not hand-edit)
 scripts/
   build-wrappers.sh          # regenerates integrations/ from canonical sources
   wrapper-templates/         # framing for each non-native harness
-docs/superpowers/            # design spec + implementation plan
+  verify.sh                  # invariant checks
 ```
 
 ## Contributing

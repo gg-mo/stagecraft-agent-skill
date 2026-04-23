@@ -1,0 +1,9 @@
+{
+  "name": "stagecraft",
+  "description": "Premium, keynote-style UI skill for coding agents — dark, minimal, cinematic reveals with disciplined motion",
+  "version": "1.0.0",
+  "author": {
+    "name": "gg-mo"
+  },
+  "homepage": "https://github.com/gg-mo/stagecraft-agent-skill"
+}

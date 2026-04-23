@@ -11,8 +11,11 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
-if [ ! -f SKILL.md ]; then
-  echo "error: run from repo root (SKILL.md not found)" >&2
+SKILL_DIR="skills/stagecraft"
+SKILL_FILE="$SKILL_DIR/SKILL.md"
+
+if [ ! -f "$SKILL_FILE" ]; then
+  echo "error: run from repo root ($SKILL_FILE not found)" >&2
   exit 1
 fi
 
@@ -28,17 +31,17 @@ strip_frontmatter() {
   awk 'BEGIN{in_fm=0; done=0} /^---$/ && !done { in_fm=!in_fm; if (!in_fm) done=1; next } !in_fm && done { print }' "$1"
 }
 
-SKILL_BODY="$(strip_frontmatter SKILL.md)"
+SKILL_BODY="$(strip_frontmatter "$SKILL_FILE")"
 
 append_references() {
   for f in \
-    references/visual-system.md \
-    references/motion-tokens.md \
-    references/reveal-patterns.md \
-    references/audit-checklist.md \
-    references/examples/01-hero-section.md \
-    references/examples/02-modal.md \
-    references/examples/03-pricing-card.md
+    "$SKILL_DIR/references/visual-system.md" \
+    "$SKILL_DIR/references/motion-tokens.md" \
+    "$SKILL_DIR/references/reveal-patterns.md" \
+    "$SKILL_DIR/references/audit-checklist.md" \
+    "$SKILL_DIR/references/examples/01-hero-section.md" \
+    "$SKILL_DIR/references/examples/02-modal.md" \
+    "$SKILL_DIR/references/examples/03-pricing-card.md"
   do
     echo ""
     echo "---"
