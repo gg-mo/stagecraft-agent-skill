@@ -1,0 +1,14 @@
+{
+  "name": "stagecraft-agent-skill",
+  "owner": {
+    "name": "gg-mo"
+  },
+  "plugins": [
+    {
+      "name": "stagecraft",
+      "source": "./",
+      "description": "Premium, keynote-style UI skill for coding agents — dark, minimal, cinematic reveals with disciplined motion",
+      "version": "1.0.0"
+    }
+  ]
+}

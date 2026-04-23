@@ -45,7 +45,7 @@ If design tension arises between "cool" and "usable," choose usable. Motion must
 
 ---
 
-# [inlined] references/visual-system.md
+# [inlined] skills/stagecraft/references/visual-system.md
 
 # Visual System
 
@@ -235,7 +235,7 @@ module.exports = {
 
 ---
 
-# [inlined] references/motion-tokens.md
+# [inlined] skills/stagecraft/references/motion-tokens.md
 
 # Motion Tokens
 
@@ -435,7 +435,7 @@ Do not raise stiffness above 160 or lower damping below 18; anything further sta
 
 ---
 
-# [inlined] references/reveal-patterns.md
+# [inlined] skills/stagecraft/references/reveal-patterns.md
 
 # Reveal Patterns
 
@@ -654,7 +654,7 @@ export function Screen({ primary, secondary }: {
 
 ---
 
-# [inlined] references/audit-checklist.md
+# [inlined] skills/stagecraft/references/audit-checklist.md
 
 # Audit Checklist (Mode C)
 
@@ -737,7 +737,7 @@ Do not skip the re-score step; the audit is not complete until every dimension i
 
 ---
 
-# [inlined] references/examples/01-hero-section.md
+# [inlined] skills/stagecraft/references/examples/01-hero-section.md
 
 # Example 1 — Hero section
 
@@ -858,7 +858,7 @@ All eight dimensions at target: palette on-system, type disciplined (two scale s
 
 ---
 
-# [inlined] references/examples/02-modal.md
+# [inlined] skills/stagecraft/references/examples/02-modal.md
 
 # Example 2 — Modal
 
@@ -993,7 +993,7 @@ All dimensions at target. Motion uses `modalIn` exit + fade backdrop. Focus trap
 
 ---
 
-# [inlined] references/examples/03-pricing-card.md
+# [inlined] skills/stagecraft/references/examples/03-pricing-card.md
 
 # Example 3 — Pricing card grid
 
